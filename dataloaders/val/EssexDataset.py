@@ -10,7 +10,7 @@ from torch.utils.data import Dataset
 # performance is exactly the same as if you use VPR-Bench.
 
 #DATASET_ROOT = '/home/USER/work/VPR-Bench/datasets/ESSEX3IN1_dataset/'
-GT_ROOT = '/media/sunveil/Data/header_detection/poddubnyy/postgraduate/VPR/gsv-cities/datasets/' # BECAREFUL, this is the ground truth that comes with GSV-Cities
+GT_ROOT = '/media/sunveil/Data/header_detection/poddubnyy/postgraduate/VPR/vpr-auto-tests/datasets/' # BECAREFUL, this is the ground truth that comes with GSV-Cities
 DATASET_ROOT = GT_ROOT+'ESSEX/ESSEX3IN1_dataset/'
 path_obj = Path(DATASET_ROOT)
 if not path_obj.exists():
