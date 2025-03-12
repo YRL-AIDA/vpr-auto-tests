@@ -3,6 +3,9 @@ import numpy as np
 from PIL import Image
 from torch.utils.data import Dataset
 
+import os
+
+
 # NOTE: you need to download the ESSEX dataset from  https://surfdrive.surf.nl/files/index.php/s/sbZRXzYe3l0v67W
 # this link is shared and maintained by the authors of VPR_Bench: https://github.com/MubarizZaffar/VPR-Bench
 # the folders named ref and query should reside in DATASET_ROOT path
@@ -10,8 +13,8 @@ from torch.utils.data import Dataset
 # performance is exactly the same as if you use VPR-Bench.
 
 #DATASET_ROOT = '/home/USER/work/VPR-Bench/datasets/ESSEX3IN1_dataset/'
-GT_ROOT = '/media/sunveil/Data/header_detection/poddubnyy/postgraduate/VPR/vpr-auto-tests/datasets/' # BECAREFUL, this is the ground truth that comes with GSV-Cities
-DATASET_ROOT = GT_ROOT+'ESSEX/ESSEX3IN1_dataset/'
+GT_ROOT = f'{os.getcwd()}/datasets/' # BECAREFUL, this is the ground truth that comes with GSV-Cities
+DATASET_ROOT = GT_ROOT + 'ESSEX/ESSEX3IN1_dataset/'
 path_obj = Path(DATASET_ROOT)
 if not path_obj.exists():
     raise Exception(f'Please make sure the path {DATASET_ROOT} to ESSEX3IN1 dataset is correct')
