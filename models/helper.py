@@ -30,11 +30,14 @@ class Flatten(torch.nn.Module):
             return x
 
 
-def get_backbone(backbone_arch='resnet50',
-                 pretrained=True,
-                 layers_to_freeze=2,
-                 layers_to_crop=[],
-                normalize = True):
+def get_backbone(
+        backbone_arch='resnet50',
+        pretrained=True,
+        layers_to_freeze=2,
+        layers_to_crop=[],
+        normalize = True,
+        backbone_config={}
+):
     """Helper function that returns the backbone given its name
 
     Args:
@@ -61,6 +64,8 @@ def get_backbone(backbone_arch='resnet50',
         return backbones.Swin(model_name='swinv2_base_window12to16_192to256_22kft1k', 
                               pretrained=pretrained, 
                               layers_to_freeze=layers_to_freeze)
+    elif 'vbdino' in backbone_arch.lower():
+        return backbones.VBDinoV2(model_name="dinov2_vitb14", **backbone_config)
     elif 'dino' in backbone_arch.lower():
         return backbones.DinoV2(normalize=normalize)
 
@@ -105,6 +110,10 @@ def get_aggregator(agg_arch='ConvAP', agg_config={}):
         assert 'in_w' in agg_config
         assert 'mix_depth' in agg_config
         return aggregators.MixVPR(**agg_config)
+    elif "netvlad" in agg_arch.lower():
+        return aggregators.NetVLAD(
+            clusters_num=agg_config.clusters_num, dim=agg_config.dim, args=agg_config
+        )
 
 
 # -------------------------------------
@@ -133,6 +142,7 @@ def main():
     backbone_output = backbone(x)
     agg_output = agg(backbone_output)
     print(f'output shape: {agg_output.shape}')
-    
+
+
 if __name__ == '__main__':
     main()

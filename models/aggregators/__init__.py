@@ -3,3 +3,4 @@ from .convap import ConvAP
 from .gem import GeMPool
 from .boq import BoQ
 from .mixvpr import MixVPR
+from .netvlad import NetVLAD
