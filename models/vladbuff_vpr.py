@@ -152,7 +152,7 @@ class VLADBuffMainVPR(VPRModel):
         self.image_interpolation = T.InterpolationMode.BILINEAR
         self.input_transform_mean = [0.485, 0.456, 0.406] 
         self.input_transform_std = [0.229, 0.224, 0.225]
-        self.image_size = (320, 320)
+        self.image_size = (322, 322)
 
         self.model =  VLADBuffMain(backbone_arch = backbone_arch,
                         agg_arch = agg_arch, agg_config = agg_config,args=args)  

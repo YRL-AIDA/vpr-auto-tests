@@ -103,7 +103,7 @@ class BOQMainVPR(VPRModel):
             for batch in tqdm(dataloader, 'Calculating descritptors...'):
                 imgs, labels = batch
                 output= self.model(imgs.to(self.device))[0].cpu()
-                print(output.shape)
+                #print(output.shape)
                 descriptors.append(output)
     
         return torch.cat(descriptors)
