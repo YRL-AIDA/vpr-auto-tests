@@ -36,7 +36,7 @@ class VPRModel(ABC):
         state_dict = torch.load(path_to_weight) 
 
         self.model.load_state_dict(state_dict)
-        self.model.eval()
+        self.model = self.model.eval()
         
     def set_model_device(self,device:str):
         self.device = device
