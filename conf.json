@@ -1,64 +1,30 @@
 {
   "models": [
     {
-      "title": "test1",
+      "title": "MIX VPR",
       "model_name": "mix",
       "model_weight_path": "/media/sunveil/Data/header_detection/poddubnyy/postgraduate/VPR/gsv-cities/resnet50_MixVPR_4096_channels(1024)_rows(4).ckpt",
       "model_conf": {},
       "device": "cuda:0"
     },
     {
-      "title": "test2",
+      "title": "BOQ VPR",
       "model_name": "boq",
       "model_weight_path": "/media/sunveil/Data/header_detection/poddubnyy/postgraduate/VPR/Bag-of-Queries/dinov2_12288.pth",
       "model_conf": {},
       "device": "cuda:0"
     },
     {
-      "title": "test3",
-      "model_name": "mix",
-      "model_weight_path": "/media/sunveil/Data/header_detection/poddubnyy/postgraduate/VPR/gsv-cities/resnet50_MixVPR_4096_channels(1024)_rows(4).ckpt",
-      "model_conf": {
-        "backbone_arch": "resnet50",
-        "layers_to_crop": [
-          4
-        ],
-        "agg_arch": "MixVPR",
-        "agg_config": {
-          "in_channels": 1024,
-          "in_h": 20,
-          "in_w": 20,
-          "out_channels": 1024,
-          "mix_depth": 4,
-          "mlp_ratio": 1,
-          "out_rows": 4
-        },
-        "pretrained": true,
-        "layers_to_freeze": 1
-      },
-      "device": "cuda:0"
-    },
-    {
-      "title": "test4",
-      "model_name": "boq",
-      "model_weight_path": "/media/sunveil/Data/header_detection/poddubnyy/postgraduate/VPR/Bag-of-Queries/dinov2_12288.pth",
-      "model_conf": {
-        "backbone_arch": "dino",
-        "normalize": true,
-        "agg_arch": "boq",
-        "agg_config": {
-          "in_channels": 768,
-          "proj_channels": 384,
-          "num_queries": 64,
-          "num_layers": 2,
-          "row_dim": 32
-        }
-      },
+      "title": "VladBuff VPR",
+      "model_name": "vladbuff",
+      "model_weight_path": "/media/sunveil/Data/header_detection/vpr-auto-tests/dnv2_NV_AB_wpca8192_last.ckpt",
+      "model_conf": {},
       "device": "cuda:0"
     }
   ],
   "datasets": [
-    "essex"
+    "essex",
+    "nordland"
   ],
   "tests": [
     "recall"

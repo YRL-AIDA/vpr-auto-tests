@@ -6,9 +6,6 @@
 **.zip
 **.tar.gz
 
-# Images
-**.jpg
-**.png
 
 # PyTorch checkpoints
 **.pt
@@ -18,3 +15,6 @@
 # Datasets
 datasets/**/*.txt
 datasets/**/*.npy
+datasets/**/*.jpg
+datasets/**/*.jpeg
+datasets/**/*.png
