@@ -11,6 +11,7 @@ from models import helper
 from models import VPRModel
 from dataloaders.val.EssexDataset import EssexDataset
 from dataloaders.val.NordlandDataset import NordlandDataset
+from dataloaders.val.IrkDataset import IrkDataset
 import models
 @dataclass
 class ModelItem:
@@ -65,6 +66,8 @@ def get_val_dataset(dataset_name, input_transform):
     
         elif 'pitts' in dataset_name:
             ds = PittsburghDataset(which_ds=dataset_name, input_transform = input_transform)
+        elif 'irk' in dataset_name:
+            ds = IrkDataset(input_transform = input_transform)
         else:
             raise ValueError
         
