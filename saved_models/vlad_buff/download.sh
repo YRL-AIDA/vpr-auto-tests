@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# ************************
+# * LINKS DOESNT WORK!!! *
+# * DOWNLOAD MANUALLY!!! *
+# ************************
+
 declare file_name;
 declare download_link;
 
@@ -18,9 +23,3 @@ download_link="https://universityofadelaide.app.box.com/index.php?rm=box_downloa
 # Download models
 echo Downloading $file_name...;
 curl "$download_link" > $file_name;
-
-
-
-
-
-
