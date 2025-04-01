@@ -8,7 +8,7 @@ download_link="https://universityofadelaide.app.box.com/index.php?rm=box_downloa
 
 # Download models
 echo Downloading $file_name...;
-curl "$download_link" > $file_name;
+wget "$download_link" -O $file_name;
 
 # ----------------
 
@@ -17,10 +17,4 @@ download_link="https://universityofadelaide.app.box.com/index.php?rm=box_downloa
 
 # Download models
 echo Downloading $file_name...;
-curl "$download_link" > $file_name;
-
-
-
-
-
-
+wget "$download_link" -O $file_name;
