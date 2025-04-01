@@ -10,7 +10,7 @@ download_link="https://drive.usercontent.google.com/download?id=1DQnefjk1hVICOEY
 
 # Download models
 echo Downloading $file_name...;
-curl "$download_link" > $file_name;
+wget "$download_link" -O $file_name;
 
 echo "--- --- ---";
 
@@ -20,7 +20,7 @@ download_link="https://drive.usercontent.google.com/download?id=1khiTUNzZhfV2UUu
 
 # Download models
 echo Downloading $file_name...;
-curl "$download_link" > $file_name;
+wget "$download_link" -O $file_name;
 
 echo "--- --- ---";
 
@@ -30,4 +30,4 @@ download_link="https://drive.usercontent.google.com/download?id=1vuz3PvnR7vxnDDL
 
 # Download models
 echo Downloading $file_name...;
-curl "$download_link" > $file_name;
+wget "$download_link" -O $file_name;
