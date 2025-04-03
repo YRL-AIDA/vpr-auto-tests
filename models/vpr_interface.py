@@ -33,8 +33,8 @@ class VPRModel(ABC):
         pass
         
     def load_model_state_dict(self,path_to_weight: str):
-        state_dict = torch.load(path_to_weight) 
-
+        state_dict = torch.load(path_to_weight,map_location='cpu') 
+        
         self.model.load_state_dict(state_dict)
         self.model = self.model.eval()
         
