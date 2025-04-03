@@ -8,5 +8,5 @@ download_link="https://surfdrive.surf.nl/files/index.php/s/sbZRXzYe3l0v67W/downl
 
 # Download models
 echo Downloading $file_name...;
-curl "$download_link" > $file_name;
+wget "$download_link" -O $file_name;
 unzip $file_name;

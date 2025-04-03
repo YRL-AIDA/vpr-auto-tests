@@ -19,15 +19,6 @@ wget "$download_link" -O $file_name;
 echo Exctracting $file_name...;
 unzip $file_name;
 
-# Patch
-file_name="msls_patch.zip";
-download_link="https://cloud.icc.ru/index.php/s/zX8d2cjSRwNraFF";
-
-echo Downloading $file_name...;
-wget "$download_link" -O $file_name;
-echo Exctracting $file_name...;
-unzip $file_name;
-
 # Msls-1
 file_name="msls1.zip";
 download_link="https://cloud.icc.ru/index.php/s/YSn6yk34qLMtwEk";
@@ -76,6 +67,15 @@ unzip $file_name;
 # Msls-6
 file_name="msls6.zip";
 download_link="https://cloud.icc.ru/index.php/s/9ockwoGsKacHjNf";
+
+echo Downloading $file_name...;
+wget "$download_link" -O $file_name;
+echo Exctracting $file_name...;
+unzip $file_name;
+
+# Patch
+file_name="msls_patch.zip";
+download_link="https://cloud.icc.ru/index.php/s/zX8d2cjSRwNraFF";
 
 echo Downloading $file_name...;
 wget "$download_link" -O $file_name;
