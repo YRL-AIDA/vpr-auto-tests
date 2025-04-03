@@ -17,6 +17,13 @@
    conda install ipykernel
     python -m ipykernel install --user --name vpr-env --display-name "Python3.12 (vpr-env)"
     ```
+
+## Скачивание датасетов
+Запустить скрипт `./datasets/DATASET_NAME/download.sh` для автоматического скачивания датасета. 
+
+## Скачивание чекпоинтов моделей
+Запустить скрипт `./saved_models/MODEL_NAME/download.sh` для автоматического скачивания чекпоинтов.
+
 ## Как добавить датасет
 
 1. Создать дирректорию датасета в datasets и загрузить в нее данные.
