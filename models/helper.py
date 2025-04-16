@@ -68,6 +68,7 @@ def get_backbone(
         return backbones.VBDinoV2(model_name="dinov2_vitb14", **backbone_config)
     elif 'dino' in backbone_arch.lower():
         return backbones.DinoV2(normalize=normalize)
+     
 
 
 def get_aggregator(agg_arch='ConvAP', agg_config={}):

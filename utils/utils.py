@@ -12,7 +12,10 @@ from models import VPRModel
 from dataloaders.val.EssexDataset import EssexDataset
 from dataloaders.val.NordlandDataset import NordlandDataset
 from dataloaders.val.IrkDataset import IrkDataset
+from dataloaders.val.MapillaryDataset import MSLS
 import models
+
+
 @dataclass
 class ModelItem:
     title: str

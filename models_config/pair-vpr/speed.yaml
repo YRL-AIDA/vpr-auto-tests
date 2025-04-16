@@ -1,0 +1,22 @@
+encoder:
+  model_name: "dinov2_vitb14_reg"
+  num_trainable_blocks: 6
+  return_classtok: true
+decoder:
+  dec_embed_dim: 768
+  dec_num_heads: 12
+  dec_depth: 12
+  mlp_ratio: 4
+masking:
+  mask_ratio: 0.9
+  patch_size: 14 # based on encoder
+train:
+  classtoken: true
+  random: false
+augmentation:
+  img_res: 322 # 322
+globaldesc:
+  dim: 512
+eval:
+  refinetopcands: 100
+  memoryeffmode: false
