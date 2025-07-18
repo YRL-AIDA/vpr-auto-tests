@@ -21,9 +21,11 @@ class MSLS(Dataset):
         self.input_transform = input_transform
 
         self.dbImages = np.load(GT_ROOT + f'{CITY}_dbImages.npy')
+        # self.dbImages = np.load(GT_ROOT + f'modified_{CITY}_dbImages.npy')
         self.qIdx = np.load(GT_ROOT + f'{CITY}_qIdx.npy')
         self.qImages = np.load(GT_ROOT + f'{CITY}_qImages.npy')
-        self.ground_truth = np.load(GT_ROOT + f'{CITY}_pIdx.npy', allow_pickle=True)
+        # self.ground_truth = np.load(GT_ROOT + f'{CITY}_pIdx.npy', allow_pickle=True)
+        self.ground_truth = np.load(GT_ROOT + f'modified_{CITY}_pIdx.npy', allow_pickle=True)
         
         # reference images then query images
         self.images = np.concatenate((self.dbImages, self.qImages[self.qIdx]))

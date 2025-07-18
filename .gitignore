@@ -14,7 +14,8 @@
 
 # Datasets
 datasets/**/*.txt
-datasets/**/*.npy
+# datasets/**/*.npy
+datasets/**/*.csv
 datasets/**/*.jpg
 datasets/**/*.jpeg
 datasets/**/*.png
